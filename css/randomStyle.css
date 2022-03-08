@@ -1,0 +1,225 @@
+*{
+    border-radius: 5px;
+}
+
+body{
+    background: #3f4b5f;
+    color: white;
+    font-family: 'consolas';
+}
+
+header h1, header h2{
+    text-align: center;
+}
+
+form #structure{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+#randomPick1,#randomPick2,#randomPick3,
+#randomPick4,#randomPick5,#randomPick6,
+#pickPlayerOne,#pickPlayerTwo{
+    animation: animations 2s linear infinite;
+}
+
+main:last-child{
+    display: inline-block;
+    justify-content: center;
+}
+
+main section:nth-child(1){
+    text-align: left;
+    border-right: solid red;
+    border-radius: 0;
+    margin-left: 2em;
+}
+
+main section:nth-child(2){
+    text-align: right;
+    border-left: solid red;
+    border-radius: 0;
+    margin-right: 2em;
+}
+
+#pickPlayerOne, #pickPlayerTwo{
+    display: inline-block;
+    border: solid red;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+}
+
+aside{
+    text-align: center;
+    margin: 2em;
+}
+
+.locationPlayerOne, .locationPlayerTwo{
+    width: 100px;
+    height: 100px;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    /*filter: brightness(25%);*/
+}
+
+#randomPick1,#randomPick2,#randomPick3,
+#randomPick4,#randomPick5,#randomPick6{
+    cursor: pointer;
+}
+
+
+.jokerPlayerOne, .jokerPlayerTwo{
+    width: 50px;
+    height: 50px;
+}
+
+#displayCharactersPlayerOne img, #displayCharactersPlayerTwo img{
+    width: 50px;
+    height: 50px;
+    padding: 3px;
+    margin: 5px;
+    transition: 0.25s ease-in-out;
+    border: solid red;
+    cursor: pointer;
+}
+
+#displayCharactersPlayerOne img:hover, #displayCharactersPlayerTwo img:hover{
+    width: 60px;
+    height: 60px;
+    transition: 0.25s ease-in-out;
+}
+
+button{
+    font-family: 'consolas' ;
+    background: none;
+    font-size: 1.2em;
+    color: white;
+    border: solid red;
+    margin: -1em;
+    width: 150px;
+    height: 55px;
+    animation: animations 2s linear infinite;
+    cursor: pointer;
+}
+
+@keyframes animations{
+    0%,49%{
+        box-shadow: none;
+    }
+
+    50%,100%{
+        box-shadow: 0 0 5px #f10,
+                    0 0 15px #f10,
+                    0 0 30px #f10;
+    }
+}
+
+
+/*-----------------------------------*/
+
+#checkboxBtn1, #checkboxBtn2, #checkboxBtn3, #checkboxBtn4, #checkboxBtn5, #checkboxBtn6,
+
+#finalCheckboxBtn1,#finalCheckboxBtn2,#finalCheckboxBtn3,
+#finalCheckboxBtn4,#finalCheckboxBtn5,#finalCheckboxBtn6{
+    position: absolute;
+    margin-left: 3em;
+    transform: translate(-50%, 50%);
+    width: 100px;
+    height: 20px;
+}
+
+#checkboxBtn1 input, #checkboxBtn2 input, #checkboxBtn3 input, #checkboxBtn4 input, #checkboxBtn5 input, #checkboxBtn6 input,
+
+#finalCheckboxBtn1 input,#finalCheckboxBtn2 input,#finalCheckboxBtn3 input,
+#finalCheckboxBtn4 input,#finalCheckboxBtn5 input,#finalCheckboxBtn6 input{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
+
+#checkboxBtn1 div, #checkboxBtn2 div, #checkboxBtn3 div, #checkboxBtn4 div, #checkboxBtn5 div, #checkboxBtn6 div,
+
+#finalCheckboxBtn1 div,#finalCheckboxBtn2 div,#finalCheckboxBtn3 div,
+#finalCheckboxBtn4 div,#finalCheckboxBtn5 div,#finalCheckboxBtn6 div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: solid black;
+    overflow: hidden;
+}
+
+#checkboxBtn1 div .slide, #checkboxBtn2 div .slide, #checkboxBtn3 div .slide, 
+#checkboxBtn4 div .slide, #checkboxBtn5 div .slide, #checkboxBtn6 div .slide,
+
+#finalCheckboxBtn1 div .finalSlide,#finalCheckboxBtn2 div .finalSlide,#finalCheckboxBtn3 div .finalSlide,
+#finalCheckboxBtn4 div .finalSlide,#finalCheckboxBtn5 div .finalSlide,#finalCheckboxBtn6 div .finalSlide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 20px;
+    background: black;
+    border-radius: 0;
+    transition: 0.5s;
+}
+
+#checkboxBtn1 input:checked + div .slide, #checkboxBtn2 input:checked + div .slide, #checkboxBtn3 input:checked + div .slide,
+#checkboxBtn4 input:checked + div .slide, #checkboxBtn5 input:checked + div .slide, #checkboxBtn6 input:checked + div .slide,
+
+#finalCheckboxBtn1 input:checked + div .finalSlide,#finalCheckboxBtn2 input:checked + div .finalSlide, #finalCheckboxBtn3 input:checked + div .finalSlide,
+#finalCheckboxBtn4 input:checked + div .finalSlide,#finalCheckboxBtn5 input:checked + div .finalSlide, #finalCheckboxBtn6 input:checked + div .finalSlide{
+    transform: translateX(50px);
+}
+
+
+#checkboxBtn1 .slide:before, #checkboxBtn2 .slide:before, #checkboxBtn3 .slide:before,
+#checkboxBtn4 .slide:before, #checkboxBtn5 .slide:before, #checkboxBtn6 .slide:before,
+
+#finalCheckboxBtn1 .finalSlide:before, #finalCheckboxBtn2 .finalSlide:before, #finalCheckboxBtn3 .finalSlide:before,
+#finalCheckboxBtn4 .finalSlide:before, #finalCheckboxBtn5 .finalSlide:before, #finalCheckboxBtn6 .finalSlide:before{
+    content: "LOSE";
+    position: absolute;
+    top: 0;
+    right: -50px;
+    text-align: center;
+    width: 50px;
+    height: 100%;
+    background: red;
+}
+#checkboxBtn1 .slide:after, #checkboxBtn2 .slide:after, #checkboxBtn3 .slide:after,
+#checkboxBtn4 .slide:after, #checkboxBtn5 .slide:after, #checkboxBtn6 .slide:after,
+
+#finalCheckboxBtn1 .finalSlide:after, #finalCheckboxBtn2 .finalSlide:after, #finalCheckboxBtn3 .finalSlide:after,
+#finalCheckboxBtn4 .finalSlide:after, #finalCheckboxBtn5 .finalSlide:after, #finalCheckboxBtn6 .finalSlide:after{
+    content: "WIN";
+    position: absolute;
+    top: 0;
+    left: -50px;
+    text-align: center;
+    width: 50px;
+    height: 100%;
+    background: green;
+}
+
+/*-----------------------------------*/
+
+
+footer{
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 1em;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RANDOM TEKKEN 7</title>
+    <link rel="stylesheet" href="../css/randomStyle.css">
+    <link rel="icon" href="../source/eliza.png">
+</head>
+
+<body>
+    <header>
+        <h1>FIGHT YOURS FRIENDS ON TEKKEN 7 AND SHOW YOURS SKILLS </h1>
+        <h2> GET READY FOR THE NEXT BATTLE</h2>
+    </header>
+    <aside>
+        <button onclick="randomPick()">RANDOM PICK</button>
+    </aside>
+
+    <main>
+        <form action="result.html">
+            <div id="structure">
+                <section>
+                    <h2>Player 1</h2>
+                    <header>
+                        <input type="text" name="pseudo1">
+                    </header>
+                    <article>
+                        <h2>3 randomly characters</h2>
+                        <div id=randomPick1 class=locationPlayerOne></div>
+                        <div id=randomPick2 class=locationPlayerOne></div>
+                        <div id=randomPick3 class=locationPlayerOne></div>
+                    </article>
+                    <article>
+                        <h2>JOKERS</h2>
+                        <img src="../source/unnamed.jpg" alt="joker" class="jokerPlayerOne">
+                        <img src="../source/unnamed.jpg" alt="joker" class="jokerPlayerOne">
+                        <img src="../source/unnamed.jpg" alt="joker" class="jokerPlayerOne">
+                    </article>
+
+                    <article id="validYourSelectionPlayerOne">
+                        <h2>A selected character</h2>
+                        <div id=pickPlayerOne></div>
+                        <div id="displayCharactersPlayerOne">
+                        </div>
+                    </article>
+                </section>
+
+                <section>
+                    <h2>Player 2</h2>
+                    <header></header>
+                    <article>
+                        <h2>3 randomly characters</h2>
+                        <div id=randomPick4 class=locationPlayerTwo></div>
+                        <div id=randomPick5 class=locationPlayerTwo></div>
+                        <div id=randomPick6 class=locationPlayerTwo></div>
+                    </article>
+                    <article>
+                        <h2>JOKERS</h2>
+                        <img src="../source/unnamed.jpg" alt="joker" class="jokerPlayerTwo">
+                        <img src="../source/unnamed.jpg" alt="joker" class="jokerPlayerTwo">
+                        <img src="../source/unnamed.jpg" alt="joker" class="jokerPlayerTwo">
+                    </article>
+                    <article id="validYourSelectionPlayerTwo">
+                        <h2>A selected character</h2>
+                        <div id=pickPlayerTwo></div>
+                        <div id="displayCharactersPlayerTwo"></div>
+                    </article>
+                </section>
+            </div>
+        </form>
+    </main>
+
+
+    <footer>Website creator : Alexsandre Akofovi</footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/dataTekken.js"></script>
+    <script src="../js/randomTekken.js"></script>
+    <script>playersPseudo()</script>
+    <script>createSquare()</script>
+</body>
+
+</html>
