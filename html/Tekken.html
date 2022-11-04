@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LET'S FIGHT ON TEKKEN 7</title>
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../source/eliza.png">
 </head>
 
@@ -22,7 +22,7 @@
             <article>
                 <h3>THE RULES</h3>
                 <ul>
-                    <li><span>First rule :</span> Choose your 3 characters at random for the first 3 different fights,
+                    <!-- <li><span>First rule :</span> Choose your 3 characters at random for the first 3 different fights,
                     </li>
 
                     <li><span>Second rule :</span> The jokers, of which there are 3, can only be used for the first
@@ -34,25 +34,32 @@
                     
                     <li><span>Fourth rule :</span> the winner is the one with the most wins in total (the possibility of
                         a draw).
-                    </li>
+                    </li> -->
+                    <li><span>First rule :</span> Write on bottom the pseudos</li>
+                    <li><span>Second rule :</span> Choose your mod</li>
+                    <li><span>Third rule :</span> And the fights begin</li>
                 </ul>
-                <p>NOTE: if when selecting characters (random or not) you don't have the character in the game and you
-                    don't have a joker to change character, you automatically lose</p>
+                <!-- <p>NOTE: if when selecting characters (random or not) you don't have the character in the game and you 
+                    don't have a joker to change character, you automatically lose</p> -->
             </article>
         </section>
 
         <section>
             <div>
                 <form action="chooseGameMod.html">
-                    <h3>PLAYER 1</h3>
-                    <label for="playerOnePseudo">PSEUDO :</label>
-                    <input type="text" id="playerOnePseudo" name="playerOnePseudo" required>
+                    <div>
+                        <div>
+                            <h3>PLAYER 1</h3>
+                            <input type="text" id="playerOnePseudo" name="playerOnePseudo" required>
+                        </div>
 
-                    <h3>PLAYER 2</h3>
-                    <label for="playerTwoPseudo">PSEUDO :</label>
-                    <input type="text" id="playerTwoPseudo" name="playerTwoPseudo" required>
+                        <div>
+                            <h3>PLAYER 2</h3>
+                            <input type="text" id="playerTwoPseudo" name="playerTwoPseudo" required>
+                        </div>
 
-                    <input type="submit" value="LET'S FIGHT" id="fight">
+                        <div><input type="submit" value="LET'S FIGHT" id="fight"></div>
+                    </div>
                 </form>
             </div>
         </section>

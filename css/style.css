@@ -1,7 +1,8 @@
 body{
     background: #3f4b5f;
     color: white;
-    font-family: 'consolas';
+    font-family: 'Royal acidbath outline';
+    letter-spacing: 5px;
 }
 
 header{
@@ -13,7 +14,7 @@ section article{
     border-bottom:  solid red;
     margin: 1.5em;
     padding: 0em 1.5em 0 1.5em;
-    animation: borderAnimation 3s linear infinite;
+    /* animation: borderAnimation 3s linear infinite; */
 }
 
 @keyframes borderAnimation{
@@ -37,36 +38,45 @@ section article h3{
 }
 
 section article ul{
-    margin-left: -3em;
-    font-size: 1em;
-    list-style: none;
-    padding-right: 1em;
-    text-align: justify;
+    padding-left: 0;
+    text-align: center;
 }
 
 section article ul span{
-    font-weight: bold;
+    font-weight: bolder;
     font-stretch: wider;
-    font-family: 'impact';
+    font-family: 'Royal acidbath outline';
 }
 
 section article ul li{
+    list-style: none;
     margin: 1em;
-    font-weight: lighter;
+    font-family: 'Impact';
 }
 
 form{
-    padding: 1em 0 1em 2em;
+    text-align: center;
     border-top:  solid red;
     border-bottom:  solid red;
     margin: 1.5em;
-    animation: borderAnimation 3s linear infinite;
+    padding-bottom: 1.5em;
+    /* animation: borderAnimation 3s linear infinite; */
+}
+
+form>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+form h3{
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    font-family: Impact;
 }
 
 form label{
     font-size: 1.2em;
-}
-form input{
     cursor: pointer;
 }
 
@@ -76,21 +86,30 @@ form #playerOnePseudo, form #playerTwoPseudo {
     background: none;
     color: white;
     border-radius: 5px;
-    width: 15vh;
-    padding-left: 1em;
+    width: 30vh;
+    /* padding-left: 1em; */
 }
 
 form #fight{
     display: block;
-    font-family: 'consolas' ;
+    font-family: 'Impact';
+    font-size: large;
     background: none;
     color: white;
     border: solid red;
     border-radius: 5px;
-    margin: 1em 1em 1em 0;
+    margin-top: 2em;
     width: 200px;
     height: 50px;
-    animation: buttonAnimation 1s linear infinite;
+    /* animation: buttonAnimation 1s linear infinite; */
+    cursor: pointer;
+    transition: border-color 0.5s;
+    transition: letter-spacing 1s;
+}
+
+#fight:hover{
+    border-color: green;
+    letter-spacing: .2rem;
 }
 
 @keyframes buttonAnimation{
@@ -114,9 +133,7 @@ form #fight{
 }
 
 footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    position: relative;
     text-align: center;
-    font-size: 1em;
+    font-size: 2em;
 }
