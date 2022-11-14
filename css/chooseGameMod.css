@@ -1,0 +1,225 @@
+#pseudos{
+    /* font-family: Impact; */
+    font-size: x-large;
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* height: 70vh; */
+}
+
+.container .box{
+    position: relative;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 80px;
+    transition: 0.5s;
+}
+
+.container .box::before{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: #3f4b5f;
+    border-radius: 5px;
+    transform: skewX(-15deg);
+    transition: 0.5s;
+}
+
+.container .box::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    background: white;
+    border-radius: 5px;
+    transform: skewX(-15deg);
+    transition: 0.5s;
+    filter: blur(20px);
+    transition: 0.5s;
+}
+
+
+.container .box:hover:before,
+.container .box:hover:after{
+    transform: skewX(0deg);
+    left: -15px;
+    width: calc(150% - 90px);
+}
+
+.container .box:nth-child(1):before, .container .box:nth-child(1):after{
+    background: linear-gradient(180deg, red, #3f4b5f);
+}
+.container .box:nth-child(2):before, .container .box:nth-child(2):after{
+    background: linear-gradient(180deg, red, #3f4b5f);
+}
+.container .box:nth-child(3):before, .container .box:nth-child(3):after{
+    background: linear-gradient(180deg, red, #3f4b5f);
+}
+
+.container .box span{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+    pointer-events: none;
+}
+
+.container .box span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animateSquare 2s ease-in-out infinite;
+    box-shadow: 0 50px 150px rgba(255, 255, 255, 0.05);
+}
+
+.container .box:hover span::before{
+    top: -50px;
+    left: 50px;
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+}
+
+.container .box span::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255,0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    animation: animateSquare 2s ease-in-out infinite;
+    box-shadow: 0 50px 150px rgba(255, 255, 255, 0.05);
+}
+
+.container .box:hover span::after{
+    bottom: -50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    opacity: 1;
+    animation-delay: -1s;
+}
+
+@keyframes animateSquare{
+
+    0%,100%{
+        transform: translateY(5px);
+    }
+
+    50%{
+        transform: translateY(-5px);
+    }
+}
+
+
+.container .box .content{
+    position: relative;
+    height: 300px;
+    left: 0;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    transition: 1s;
+    transform: 0.5s;
+}
+
+.container .box .content h2{
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.container{
+    border-top:  solid red;
+    border-bottom:  solid red;
+    margin: 1.5em;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2,h3{
+    text-align: center;
+}
+
+a:focus{
+    color: #3f4b5f;
+}
+
+.content:hover>p , .content:hover>div>a>button{
+    display: block;
+}
+
+.content p,button{
+    display: none;
+}
+
+.content p{
+    font-family: 'Impact';
+    text-align: center;
+    border-top: solid white;
+    border-bottom: solid white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.content div{
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+button{
+    font-family: 'Impact';
+    font-size: large;
+    background: none;
+    color: white;
+    border: solid white;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    /* animation: buttonAnimation 1s linear infinite; */
+    cursor: pointer;
+    transition: border-color 0.5s;
+    transition: letter-spacing 1s;
+}
+
+button:hover{
+    border-color: red;
+    letter-spacing: .2rem;
+}

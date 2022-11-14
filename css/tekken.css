@@ -1,0 +1,134 @@
+section {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+section article{
+    border-top:  solid red;
+    border-bottom:  solid red;
+    margin: 1.5em;
+    padding: 0em 1.5em 0 1.5em;
+    /* animation: borderAnimation 3s linear infinite; */
+}
+
+@keyframes borderAnimation{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+
+    50%{
+        filter: hue-rotate(60deg);
+    }
+
+    100%{
+        filter: hue-rotate(0deg);
+    }
+}
+
+section article h3{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+section article ul{
+    padding-left: 0;
+    text-align: center;
+}
+
+section article ul span{
+    font-weight: bolder;
+    font-stretch: wider;
+    font-family: 'Scorched Earth';
+}
+
+section article ul li{
+    list-style: none;
+    margin: 1em;
+    font-family: 'Impact';
+}
+
+form{
+    text-align: center;
+    border-top:  solid red;
+    border-bottom:  solid red;
+    margin: 1.5em;
+    padding-bottom: 1.5em;
+    /* animation: borderAnimation 3s linear infinite; */
+}
+
+form>div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+form h3{
+    letter-spacing: 2px;
+    font-size: 1.5em;
+    font-family: Impact;
+    margin-bottom: 0;
+}
+
+form label{
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+form #playerOnePseudo, form #playerTwoPseudo {
+    font-size: 1.2em;
+    font-family: 'Impact';
+    background: none;
+    color: white;
+    border-radius: 5px;
+    width: 30vh;
+    /* padding-left: 1em; */
+}
+
+form #fight{
+    display: block;
+    font-family: 'Impact';
+    font-size: large;
+    background: none;
+    color: white;
+    border: solid white;
+    border-radius: 5px;
+    margin-top: 2em;
+    width: 200px;
+    height: 50px;
+    /* animation: buttonAnimation 1s linear infinite; */
+    cursor: pointer;
+    transition: border-color 0.5s;
+    transition: letter-spacing 1s;
+}
+
+#fight:hover{
+    border-color: red;
+    letter-spacing: .2rem;
+}
+
+@keyframes buttonAnimation{
+    0%,49%{
+        box-shadow: none;
+    }
+
+    50%,100%{
+        box-shadow: 0 0 5px #f10,
+                    0 0 15px #f10,
+                    0 0 30px #f10;
+    }
+
+    0%{
+        text-shadow: none;
+    }
+
+    100%{
+        text-shadow: 0 0 5px #f10;
+    }
+}
+
+footer{
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+}
