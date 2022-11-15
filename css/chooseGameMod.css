@@ -20,9 +20,6 @@ section{
 .container .box{
     position: relative;
     width: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 80px 80px;
     transition: 0.5s;
 }
@@ -64,13 +61,13 @@ section{
 }
 
 .container .box:nth-child(1):before, .container .box:nth-child(1):after{
-    background: linear-gradient(180deg, red, #3f4b5f);
+    background: linear-gradient(180deg, #cc0000, #3f4b5f);
 }
 .container .box:nth-child(2):before, .container .box:nth-child(2):after{
-    background: linear-gradient(180deg, red, #3f4b5f);
+    background: linear-gradient(180deg, #cc0000, #3f4b5f);
 }
 .container .box:nth-child(3):before, .container .box:nth-child(3):after{
-    background: linear-gradient(180deg, red, #3f4b5f);
+    background: linear-gradient(180deg, #cc0000, #3f4b5f);
 }
 
 .container .box span{
@@ -182,7 +179,7 @@ a:focus{
     color: #3f4b5f;
 }
 
-.content:hover>p , .content:hover>div>a>button{
+.content:hover>p , .content:hover>div>button{
     display: block;
 }
 
@@ -195,6 +192,7 @@ a:focus{
     text-align: center;
     border-top: solid white;
     border-bottom: solid white;
+    font-size: 1.1em;
     padding-top: 1em;
     padding-bottom: 1em;
 }

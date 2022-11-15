@@ -8,3 +8,10 @@ body{
 header{
     text-align: center;
 }
+
+
+footer{
+    position: relative;
+    text-align: center;
+    font-size: 2em;
+}

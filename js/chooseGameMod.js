@@ -1,7 +1,11 @@
-let pseudoPlayer1 = new URL(document.location.href).searchParams.get("playerOnePseudo");
-let pseudoPlayer2 = new URL(document.location.href).searchParams.get("playerTwoPseudo");
+document.getElementById("playerOnePseudoClassicMod").setAttribute("value",tab[0]);
+document.getElementById("playerTwoPseudoClassicMod").setAttribute("value",tab[tab.length-1]);
 
-let tab = [pseudoPlayer1,"VS",pseudoPlayer2];
+document.getElementById("playerOnePseudoRandomPick").setAttribute("value",tab[0]);
+document.getElementById("playerTwoPseudoRandomPick").setAttribute("value",tab[tab.length-1]);
+
+document.getElementById("playerOnePseudoSamePick").setAttribute("value",tab[0]);
+document.getElementById("playerTwoPseudoSamePick").setAttribute("value",tab[tab.length-1]);
 
 /**
  * This function takes the players' nicknames in the url and displays it on the screen 

@@ -7,6 +7,7 @@
     <title>Choose your mod to the fights</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/chooseGameMod.css">
+    <link rel="icon" href="../source/eliza.png">
 </head>
 
 <body>
@@ -20,44 +21,60 @@
     <section>
         <div class="container">
             <div class="box">
-                <span></span>
-                <div class="content">
-                    <h2>MOD ONE</h2>
-                    <h3>Classic</h3>
-                    <p>It's simple, choose your character and fight with it</p>
-                    <div>
-                        <a href="#"><button>SELECT</button></a>
+                <form action="classicMod.html">
+                    <span></span>
+                    <div class="content">
+                        <h2>MOD ONE</h2>
+                        <h3>Classic</h3>
+                        <p>It's simple, choose your character and fight with it</p>
+                        <div id="classicGame">
+                            <input type="hidden" id="playerOnePseudoClassicMod" name="playerOnePseudo">
+                            <input type="hidden" id="playerTwoPseudoClassicMod" name="playerTwoPseudo">
+                            <button type="submit">SELECT</button>
+                        </div>
                     </div>
+                </form>
+            </div>
 
-                </div>
-            </div>
             <div class="box">
-                <span></span>
-                <div class="content">
-                    <h2>MOD TWO</h2>
-                    <h3>random pick</h3>
-                    <p>You can not choose your characters but you can reroll with max 3 jokers</p>
-                    <div>
-                        <a href="#"><button>SELECT</button></a>
+                <form action="randomPick.html">
+                    <span></span>
+                    <div class="content">
+                        <h2>MOD TWO</h2>
+                        <h3>random pick</h3>
+                        <p>You can not choose your characters but you can reroll with max 3 jokers</p>
+                        <div id="randomGame">
+                            <input type="hidden" id="playerOnePseudoRandomPick" name="playerOnePseudo">
+                            <input type="hidden" id="playerTwoPseudoRandomPick" name="playerTwoPseudo">
+                            <button type="submit">SELECT</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
+
             <div class="box">
-                <span></span>
-                <div class="content">
-                    <h2>MOD THREE</h2>
-                    <h3>same characters</h3>
-                    <p>Both players choose the same characters</p>
-                    <div>
-                        <a href="#"><button>SELECT</button></a>
+                <form action="sameCharacter.html">
+                    <span></span>
+                    <div class="content">
+                        <h2>MOD THREE</h2>
+                        <h3>same characters</h3>
+                        <p>Both players choose the same characters</p>
+                        <div id="matchMirror">
+                            <input type="hidden" id="playerOnePseudoSamePick" name="playerOnePseudo">
+                            <input type="hidden" id="playerTwoPseudoSamePick" name="playerTwoPseudo">
+                            <button type="submit">SELECT</button>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
+
         </div>
     </section>
+    <footer>Website creator : Alexsandre Akofovi</footer>
 
 </body>
 
+<script src="../js/data.js"></script>
 <script src="../js/chooseGameMod.js"></script>
 <script>DisplayPlayersPseudo()</script>
 

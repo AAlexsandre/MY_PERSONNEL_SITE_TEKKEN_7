@@ -67,7 +67,7 @@ form h3{
     letter-spacing: 2px;
     font-size: 1.5em;
     font-family: Impact;
-    margin-bottom: 0;
+    margin-bottom: 10px;
 }
 
 form label{
@@ -125,10 +125,4 @@ form #fight{
     100%{
         text-shadow: 0 0 5px #f10;
     }
-}
-
-footer{
-    position: relative;
-    text-align: center;
-    font-size: 2em;
 }
