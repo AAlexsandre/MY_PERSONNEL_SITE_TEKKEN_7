@@ -1,25 +1,124 @@
 img{
-    width: 4em;
-    height: 4em;
-    padding: 3px;
-    margin: 5px;
-    transition: 0.25s ease-in-out;
-    border: solid red;
-    cursor: pointer;
+    border-radius: 5px;
 }
 
-img:hover{
+main img{
+    width: 50px;
+    height: 50px;
+
+    transition: 0.25s ease-in-out;
+    
+    cursor: pointer;
+}
+main img, section div img{
+    padding: 3px;
+    margin: 5px;
+    border: solid red;
+}
+main img:hover{
     border-color: green;
     opacity: 70%;
 }
 
 main, section{
     display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
     text-align: center;
 }
 
+section{
+    border-top: solid red;
+    border-bottom: solid red;
+    justify-content: space-evenly;
+}
+
 section div{
-    margin: 0 1em 0 1em;
+    margin-bottom: 1em;
+}
+
+section div img{
+    width: 100px;
+    height: 100px;
+    transform: opacity 1s;
+}
+#allCharactersP1{
+    border-right: solid red;
+}
+#allCharactersP2{
+    border-left: solid red;
+}
+
+/* Chrome, Safari, Edge, Opera
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+article{
+    text-align: center;
+}
+
+.container{
+    position: relative;
+    width: 80px;
+    height: 50px;
+    border: 2px solid red;
+    transition: 0.5s;
+}
+
+.container .next{
+    position: absolute;
+    top: 50%;
+    right: 0.5em;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    z-index: 1;
+    transform: translateY(-50%) rotate(135deg);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.container .prev{
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    z-index: 1;
+    transform: translateY(-50%) rotate(315deg);
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.container .next:hover,.container .prev:hover{
+    border-top: 2px solid red;
+    border-left: 2px solid red;
+    
+}
+
+#box span{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 2em;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    user-select: none;
+}
+footer{
+    margin-top: 1em;
 }
