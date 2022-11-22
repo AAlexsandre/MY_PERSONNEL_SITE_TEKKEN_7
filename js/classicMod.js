@@ -16,106 +16,59 @@ function toSend(){
 
 toSend();
 
-/**
- * This function display all characters for the first player
- */
-function displayAllCharactersP1(i) {
-    let newImg;
-    let id;
-
-    if (i == characters.length) return;
-
-    setTimeout(function () {
-        newImg = document.createElement("img");
-        newImg.setAttribute("src", characters[i].picture);
-        newImg.setAttribute("id", "F" + characters[i].identifier);
-        newImg.setAttribute("onclick", 'chooseP1(this)');
-        id = document.getElementById("allCharactersP1");
-        id.appendChild(newImg);
-        displayAllCharactersP1(++i);
-    }, 50);
-}
-
-displayAllCharactersP1(0);
-
-/**
- * This function display all characters for the second player
- */
-function displayAllCharactersP2(i) {
-    let newImg;
-    let id;
-
-    if (i == characters.length) return;
-
-    setTimeout(function () {
-        newImg = document.createElement("img");
-        newImg.setAttribute("src", characters[i].picture);
-        newImg.setAttribute("id", "S" + characters[i].identifier);
-        id = document.getElementById("allCharactersP2");
-        newImg.setAttribute("onclick", 'chooseP2(this)');
-        id.appendChild(newImg);
-        displayAllCharactersP2(++i);
-    }, 50);
-}
-
-displayAllCharactersP2(0);
 
 /**
  * This function create a image and add the pseudos
  */
 function addThePlayer() {
     let thePlaceForTheElement = document.getElementById("playerOne");
-    let thePlaceForTheElement2 = document.getElementById("playerOneCharacterChoose");
     let pNode = document.createTextNode(tab[0]);
-    sameThings(thePlaceForTheElement, thePlaceForTheElement2, pNode);
+    sameThings(thePlaceForTheElement, pNode);
 
     thePlaceForTheElement = document.getElementById("playerTwo");
-    thePlaceForTheElement2 = document.getElementById("playerTwoCharacterChoose");
     pNode = document.createTextNode(tab[2]);
-    sameThings(thePlaceForTheElement, thePlaceForTheElement2, pNode);
+    sameThings(thePlaceForTheElement, pNode);
 }
 
 /**
  * This function use the same caracters for the function "addThePlayer()"
  */
-function sameThings(thePlaceForTheElement, thePlaceForTheElement2, pNode) {
+function sameThings(thePlaceForTheElement, pNode) {
     let newP = document.createElement("p");
-
-    let newImg = document.createElement("img");
-    newImg.setAttribute("src", "../source/question-mark-1544553868vD2.jpg");
 
     newP.appendChild(pNode);
     thePlaceForTheElement.appendChild(newP);
-    thePlaceForTheElement2.appendChild(newImg);
-    addTheCompter(thePlaceForTheElement);
 }
 
 addThePlayer();
 
-function chooseP1(characterPicture) {
-    let select = document.getElementById("playerOneCharacterChoose");
-    removeAndAdd(select, characterPicture);
+
+const myInputP1 = document.getElementById("my-inputP1");
+function stepperP1(btn){
+    let id = btn.getAttribute("id");
+    let min = myInputP1.getAttribute("min");
+    let max = myInputP1.getAttribute("max");
+    let step = myInputP1.getAttribute("step");
+    let val = myInputP1.getAttribute("value");
+    let calcStep = (id == "incrementP1" || id == "incrementP2") ? (step*1) : (step * -1);
+    let newValue = parseInt(val) + calcStep;
+
+    if(newValue >= min && newValue <= max){
+        myInputP1.setAttribute("value", newValue);
+    }
 }
 
-function chooseP2(characterPicture) {
-    let select = document.getElementById("playerTwoCharacterChoose");
-    removeAndAdd(select, characterPicture);
-}
+const myInputP2 = document.getElementById("my-inputP2");
+function stepperP2(btn){
+    let id = btn.getAttribute("id");
+    let min = myInputP2.getAttribute("min");
+    let max = myInputP2.getAttribute("max");
+    let step = myInputP2.getAttribute("step");
+    let val = myInputP2.getAttribute("value");
+    let calcStep = (id == "incrementP2") ? (step*1) : (step * -1);
+    let newValue = parseInt(val) + calcStep;
 
-
-function removeAndAdd(select, characterPicture) {
-    select.removeChild(select.lastChild);
-
-    let newImg = document.createElement("img");
-    newImg.setAttribute("src", characterPicture.src);
-    select.appendChild(newImg);
-}
-
-function addTheCompter(select) {
-    let newInput = document.createElement("input");
-    newInput.setAttribute("type", "number");
-    newInput.setAttribute("value", 0);
-    newInput.setAttribute("min", 0);
-    select.appendChild(newInput);
-
+    if(newValue >= min && newValue <= max){
+        myInputP2.setAttribute("value", newValue);
+    }
 }

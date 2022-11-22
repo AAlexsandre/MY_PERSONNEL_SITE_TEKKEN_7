@@ -13,36 +13,68 @@
 <body>
     <header>
         <h1>CLASSIC MOD</h1>
-        <h2>CHOOSE YOUR CHARACTER AND FIGHT</h2>
+        <h2>CHOOSE YOUR CHARACTER IN THE GAME AND FIGHT</h2>
     </header>
 
     <main>
-        <div id="allCharactersP1">
+        <div id="test">
+            <form action="result.html" id="toSendResultPage">    
+                <div id="playerOne">
+                    <p>number of wins</p>
+                    <div class="container">
+                        <button id="decrementP1" onclick="stepperP1(this)" type="button">⟱</button>
+                        <input type="number" min="0" max="100" value="0" step="1" id="my-inputP1" name="winsP1" readonly>
+                        <button id="incrementP1" onclick="stepperP1(this)" type="button">⟰</button>
+                    </div>
+                </div>
+    
+                <div id="playerTwo">
+                    <p>number of wins</p>
+                    <div class="container">
+                        <button id="decrementP2" onclick="stepperP2(this)" type="button">⟱</button>
+                        <input type="number" min="0" max="100" value="0" step="1" id="my-inputP2" name="winsP2" readonly>
+                        <button id="incrementP2" onclick="stepperP2(this)" type="button">⟰</button>
+                    </div>
+                </div>
+                <input type="submit" value="To send">
+            </form>
         </div>
-        <div id="allCharactersP2">
-        </div>
+
     </main>
 
-    <section>
-        <div id="playerOne">
-        </div>
-
-        <div id="playerTwo">
-        </div>
-    </section>
-
-    <section>
-        <div id="playerOneCharacterChoose">
-        </div>
-
-        <div id="playerTwoCharacterChoose">
-        </div>
-    </section>
 
     <article>
-        <form action="result.html" id="toSendResultPage">
-            <input type="submit">
-        </form>
+        <div class="set">
+            <div><img src="../source/master-raven.png" alt=""></div>
+            <div><img src="../source/steve.png" alt=""></div>
+            <div><img src="../source/akuma.png" alt=""></div>
+            <div><img src="../source/eliza.png" alt=""></div>
+            <div><img src="../source/anna.png" alt=""></div>
+            <div><img src="../source/dragunov.png" alt=""></div>
+            <div><img src="../source/feng.png" alt=""></div>
+            <div><img src="../source/leroy.png" alt=""></div>
+        </div>
+        <div class="set set2">
+            <div><img src="../source/kuma.png" alt=""></div>
+            <div><img src="../source/armor-king.png" alt=""></div>
+            <div><img src="../source/alisa.png" alt=""></div>
+            <div><img src="../source/josie.png" alt=""></div>
+            <div><img src="../source/devil-jin.png" alt=""></div>
+            <div><img src="../source/geese.png" alt=""></div>
+            <div><img src="../source/feng.png" alt=""></div>
+            <div><img src="../source/gigas.png" alt=""></div>
+        </div>
+        <div class="set set3">
+            <div><img src="../source/eddy.png" alt=""></div>
+            <div><img src="../source/julia.png" alt=""></div>
+            <div><img src="../source/zafina.png" alt=""></div>
+            <div><img src="../source/kazumi.png" alt=""></div>
+            <div><img src="../source/anna.png" alt=""></div>
+            <div><img src="../source/panda.png" alt=""></div>
+            <div><img src="../source/paul.png" alt=""></div>
+            <div><img src="../source/law.png" alt=""></div>
+        </div>
+
     </article>
 
     <footer>Website creator : Alexsandre Akofovi</footer>
