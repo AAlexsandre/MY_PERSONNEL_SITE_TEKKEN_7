@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LET'S FIGHT ON TEKKEN 7</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/sameCharacter.css">
+    <link rel="icon" href="../source/eliza.png">
+</head>
+
+<body>
+    <header>
+        <h1>CLASSIC MOD</h1>
+    </header>
+
+    <main>
+        <div id="container">
+            <form action="result.html" id="toSendResultPage">    
+                <div id="playerOne">
+                    <p>number of wins</p>
+                    <div class="container">
+                        <button id="decrementP1" onclick="stepperP1(this)" type="button">⟱</button>
+                        <input type="number" min="0" max="100" value="0" step="1" id="my-inputP1" name="winsP1" readonly>
+                        <button id="incrementP1" onclick="stepperP1(this)" type="button">⟰</button>
+                    </div>
+                </div>
+    
+                <div id="playerTwo">
+                    <p>number of wins</p>
+                    <div class="container">
+                        <button id="decrementP2" onclick="stepperP2(this)" type="button">⟱</button>
+                        <input type="number" min="0" max="100" value="0" step="1" id="my-inputP2" name="winsP2" readonly>
+                        <button id="incrementP2" onclick="stepperP2(this)" type="button">⟰</button>
+                    </div>
+                </div>
+                <input type="submit" value="To send">
+            </form>
+        </div>
+    </main>
+
+    <section>
+        <div>
+            <img src="../source/alisa.png" alt="">
+        </div>
+    </section>
+
+    <footer>Website creator : Alexsandre Akofovi</footer>
+    <script src="../js/data.js"></script>
+    <script src="../js/dataTekken.js"></script>
+    <script src="../js/sameCharacters.js"></script>
+</body>
+
+</html>
